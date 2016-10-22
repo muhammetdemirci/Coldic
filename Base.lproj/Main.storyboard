@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XTh-JL-bny">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="K6g-JR-vK8">
+            <objects>
+                <viewController id="XTh-JL-bny" customClass="ViewController" customModule="Coldic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aPY-h1-1rs"/>
+                        <viewControllerLayoutGuide type="bottom" id="jAb-2t-8lF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Agi-NS-vTf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtb-A4-xk4">
+                                <items>
+                                    <barButtonItem style="plain" id="bm0-Qd-8S8">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="whileEditing" id="H0a-fH-rW0">
+                                            <rect key="frame" x="16" y="7" width="324" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="search" id="1is-Le-oK5">
+                                        <color key="tintColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="SearchButtonTapped:" destination="XTh-JL-bny" id="urm-WK-CyS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25E-Y1-PIm" customClass="GADBannerView">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LDJ-1P-PEP"/>
+                                    <constraint firstAttribute="width" constant="320" id="U11-Tt-7hE"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jk7-ni-JTE">
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="25E-Y1-PIm" firstAttribute="top" secondItem="jk7-ni-JTE" secondAttribute="bottom" id="0bb-mr-wEo"/>
+                            <constraint firstItem="jk7-ni-JTE" firstAttribute="leading" secondItem="Agi-NS-vTf" secondAttribute="leading" constant="5" id="AvM-98-U59"/>
+                            <constraint firstItem="wtb-A4-xk4" firstAttribute="leading" secondItem="Agi-NS-vTf" secondAttribute="leadingMargin" constant="-20" id="ECi-EX-Ma2"/>
+                            <constraint firstItem="jk7-ni-JTE" firstAttribute="top" secondItem="wtb-A4-xk4" secondAttribute="bottom" constant="15" id="G2y-G2-3bB"/>
+                            <constraint firstItem="25E-Y1-PIm" firstAttribute="centerX" secondItem="Agi-NS-vTf" secondAttribute="centerX" id="Rlp-2J-iG5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wtb-A4-xk4" secondAttribute="trailing" constant="-20" id="WQy-LL-pdt"/>
+                            <constraint firstAttribute="trailing" secondItem="jk7-ni-JTE" secondAttribute="trailing" id="kuv-ao-Oxw"/>
+                            <constraint firstItem="jAb-2t-8lF" firstAttribute="top" secondItem="25E-Y1-PIm" secondAttribute="bottom" id="rLC-JB-utO"/>
+                            <constraint firstItem="wtb-A4-xk4" firstAttribute="top" secondItem="aPY-h1-1rs" secondAttribute="bottom" constant="8" id="rNK-o7-Y1S"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="bannerView" destination="25E-Y1-PIm" id="yJz-ML-d4c"/>
+                        <outlet property="vocab_txt" destination="jk7-ni-JTE" id="7lf-NU-H15"/>
+                        <outlet property="word" destination="H0a-fH-rW0" id="1ZH-aq-nvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G4K-d4-olE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210.40000000000001" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>
